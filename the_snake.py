@@ -333,12 +333,6 @@ def main() -> None:
         if snake_head == apple.position:
             snake.length += 1
 
-            # Проверка победы
-            if snake.length >= GRID_WIDTH * GRID_HEIGHT:
-                print(f'Ура! Победа! Счет: {snake.length}.')
-                pg.quit()
-                raise SystemExit
-
             snake.change_speed()
             apple.randomize_position(snake.positions)
 
